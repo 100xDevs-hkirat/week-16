@@ -1,11 +1,6 @@
 import { Chain } from "./zeus";
 
-const chain = Chain("http://localhost:4000/graphql", {
-    headers: {
-        authorization: "Bearer 123123",
-        "Content-Type": "application/json"
-    }
-});
+const chain = Chain("http://localhost:4000/graphql");
 
 async function send() {
     try {
@@ -21,7 +16,7 @@ async function send() {
                 email: true
             }]
         })
-        console.log(response.createUser)   
+        console.log(response)   
     }  catch(e) {
         console.log(e);
     }
